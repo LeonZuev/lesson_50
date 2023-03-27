@@ -18,6 +18,7 @@ public class Main {
 //    }
 
     Date current = new Date(); // текущая дата и время
+
     // Date - количество миллисекунд с момента 00:00:00 UTC 01.01.1970
     // например, 1679939243000 миллисекунд - это 2023-03-27 17:47:23.000
 
@@ -26,5 +27,6 @@ public class Main {
     // - он возвращает количество лет, прошедшее с 1900 года
     int age = 1900 + current.getYear() - year;
     System.out.println("Похоже, тебе " + age + " лет. Или " + (age - 1) + "!");
+    System.out.println("дата " + current);
   }
 }
