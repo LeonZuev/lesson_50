@@ -84,4 +84,18 @@ public class RectangleTests {
   public void negativeSides(int sideA, int sideB) {
     assertThrowsExactly(IllegalArgumentException.class, () -> new Rectangle(sideA, sideB));
   }
+
+
+  @ParameterizedTest
+  @CsvSource({
+          "5, 3, 'Rectangle {длина: 5, ширина: 3} (площадь: 15)'",
+          "3, 5, 'Rectangle {длина: 5, ширина: 3} (площадь: 15)'",
+  })
+  public void toString(int sideA,int sideB, String expected) {
+    Rectangle rect = new Rectangle(sideA, sideB);
+
+    String actual = rect.toString();
+
+    assertEquals(expected, actual);
+  }
 }
